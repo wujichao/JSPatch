@@ -12,7 +12,9 @@
 
 + (void)main:(JSContext *)context
 {
-    NSArray *extensionArray = @[@"JPUIGraphics", @"JPUIGeometry", @"JPUIImage"];
+    NSArray *extensionArray = @[@JP_Stringify(JPUIGraphics),
+                                @JP_Stringify(JPUIGeometry),
+                                @JP_Stringify(JPUIImage)];
     [JPEngine addExtensions:extensionArray];
 }
 

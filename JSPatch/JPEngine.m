@@ -317,12 +317,12 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMemoryWarning) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
     
-    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"JSPatch" ofType:@"js"];
-    if (!path) _exceptionBlock(@"can't find JSPatch.js");
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@JP_Stringify(JSPatch) ofType:@"js"];
+    if (!path) _exceptionBlock(@"can't find "JP_Stringify(JSPatch)".js");
     NSString *jsCore = [[NSString alloc] initWithData:[[NSFileManager defaultManager] contentsAtPath:path] encoding:NSUTF8StringEncoding];
     
     if ([_context respondsToSelector:@selector(evaluateScript:withSourceURL:)]) {
-        [_context evaluateScript:jsCore withSourceURL:[NSURL URLWithString:@"JSPatch.js"]];
+        [_context evaluateScript:jsCore withSourceURL:[NSURL URLWithString:@JP_Stringify(JSPatch)".js"]];
     } else {
         [_context evaluateScript:jsCore];
     }
@@ -1207,7 +1207,7 @@ static id callSelector(NSString *className, NSString *selectorName, JSValue *arg
                 }
                 if ([(JSValue *)arguments[i-2] hasProperty:@"__isBlock"]) {
                     JSValue *blkJSVal = arguments[i-2];
-                    Class JPBlockClass = NSClassFromString(@"JPBlock");
+                    Class JPBlockClass = NSClassFromString(@JP_Stringify(JPBlock));
                     if (JPBlockClass && ![blkJSVal[@"blockObj"] isUndefined]) {
                         __autoreleasing id cb = [JPBlockClass performSelector:@selector(blockWithBlockObj:) withObject:[blkJSVal[@"blockObj"] toObject]];
                         [invocation setArgument:&cb atIndex:i];
@@ -1682,7 +1682,7 @@ static id formatJSToOC(JSValue *jsval)
             return NSClassFromString(obj[@"__clsName"]);
         }
         if (obj[@"__isBlock"]) {
-            Class JPBlockClass = NSClassFromString(@"JPBlock");
+            Class JPBlockClass = NSClassFromString(@JP_Stringify(JPBlock));
             if (JPBlockClass && ![jsval[@"blockObj"] isUndefined]) {
                 return [JPBlockClass performSelector:@selector(blockWithBlockObj:) withObject:[jsval[@"blockObj"] toObject]];
             } else {

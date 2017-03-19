@@ -15,8 +15,6 @@
 		2D6D13011B0B8CFF0095A435 /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = 2D6D13001B0B8CFF0095A435 /* demo.js */; };
 		360BCF4E1D82DCFC00202977 /* JPDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 360BCF4D1D82DCFC00202977 /* JPDispatch.m */; };
 		360BCF541D82EFCD00202977 /* JPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 360BCF531D82EFCD00202977 /* JPProtocol.m */; };
-		3613C3861C6329F300E915CB /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3613C3611C6329F300E915CB /* JPEngine.m */; };
-		3613C3871C6329F300E915CB /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 3613C3621C6329F300E915CB /* JSPatch.js */; };
 		3613C3881C6329F300E915CB /* JPLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3613C3651C6329F300E915CB /* JPLoader.m */; };
 		3613C3891C6329F300E915CB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 3613C3691C6329F300E915CB /* ioapi.c */; };
 		3613C38A1C6329F300E915CB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 3613C36B1C6329F300E915CB /* mztools.c */; };
@@ -71,6 +69,8 @@
 		E1B89EA01B203482000645C2 /* JPMultithreadTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B89E9F1B203482000645C2 /* JPMultithreadTestObject.m */; };
 		E1B89EA31B218986000645C2 /* JPInheritanceTestObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B89EA21B218986000645C2 /* JPInheritanceTestObjects.m */; };
 		E1B89EAE1B228818000645C2 /* multithreadTest.js in Resources */ = {isa = PBXBuildFile; fileRef = E1B89EAD1B228818000645C2 /* multithreadTest.js */; };
+		EA78CB811E7E8AF500E15121 /* hctaPSJ.js in Resources */ = {isa = PBXBuildFile; fileRef = EA78CB7D1E7E8AF500E15121 /* hctaPSJ.js */; };
+		EA78CB821E7E8AF500E15121 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78CB7F1E7E8AF500E15121 /* JPEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,9 +97,6 @@
 		360BCF4D1D82DCFC00202977 /* JPDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPDispatch.m; sourceTree = "<group>"; };
 		360BCF521D82EFCD00202977 /* JPProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPProtocol.h; sourceTree = "<group>"; };
 		360BCF531D82EFCD00202977 /* JPProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPProtocol.m; sourceTree = "<group>"; };
-		3613C3601C6329F300E915CB /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
-		3613C3611C6329F300E915CB /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
-		3613C3621C6329F300E915CB /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		3613C3641C6329F300E915CB /* JPLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoader.h; sourceTree = "<group>"; };
 		3613C3651C6329F300E915CB /* JPLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoader.m; sourceTree = "<group>"; };
 		3613C3681C6329F300E915CB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
@@ -204,6 +201,11 @@
 		E1B89EA11B218986000645C2 /* JPInheritanceTestObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPInheritanceTestObjects.h; sourceTree = "<group>"; };
 		E1B89EA21B218986000645C2 /* JPInheritanceTestObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPInheritanceTestObjects.m; sourceTree = "<group>"; };
 		E1B89EAD1B228818000645C2 /* multithreadTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = multithreadTest.js; sourceTree = "<group>"; };
+		EA78CB7D1E7E8AF500E15121 /* hctaPSJ.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hctaPSJ.js; sourceTree = "<group>"; };
+		EA78CB7E1E7E8AF500E15121 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		EA78CB7F1E7E8AF500E15121 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		EA78CB801E7E8AF500E15121 /* RenamePrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenamePrefix.h; sourceTree = "<group>"; };
+		EA78CB831E7E8B5200E15121 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +232,8 @@
 		2D5D89161B0B8BFF009382EC /* JSPatchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA78CB7C1E7E8AF500E15121 /* JSPatch */,
 				3613C33E1C6329F300E915CB /* Extensions */,
-				3613C35F1C6329F300E915CB /* JSPatch */,
 				3613C3631C6329F300E915CB /* Loader */,
 				2D6D12F91B0B8CF20095A435 /* Supporting Files */,
 				2D5D89171B0B8BFF009382EC /* AppDelegate.h */,
@@ -239,6 +241,7 @@
 				2D5D891D1B0B8BFF009382EC /* JPViewController.h */,
 				2D5D891E1B0B8BFF009382EC /* JPViewController.m */,
 				2D6D13001B0B8CFF0095A435 /* demo.js */,
+				EA78CB831E7E8B5200E15121 /* PrefixHeader.pch */,
 			);
 			path = JSPatchDemo;
 			sourceTree = "<group>";
@@ -275,17 +278,6 @@
 			);
 			name = Extensions;
 			path = ../../../Extensions;
-			sourceTree = "<group>";
-		};
-		3613C35F1C6329F300E915CB /* JSPatch */ = {
-			isa = PBXGroup;
-			children = (
-				3613C3601C6329F300E915CB /* JPEngine.h */,
-				3613C3611C6329F300E915CB /* JPEngine.m */,
-				3613C3621C6329F300E915CB /* JSPatch.js */,
-			);
-			name = JSPatch;
-			path = ../../../JSPatch;
 			sourceTree = "<group>";
 		};
 		3613C3631C6329F300E915CB /* Loader */ = {
@@ -500,6 +492,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA78CB7C1E7E8AF500E15121 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				EA78CB7D1E7E8AF500E15121 /* hctaPSJ.js */,
+				EA78CB7E1E7E8AF500E15121 /* JPEngine.h */,
+				EA78CB7F1E7E8AF500E15121 /* JPEngine.m */,
+				EA78CB801E7E8AF500E15121 /* RenamePrefix.h */,
+			);
+			name = JSPatch;
+			path = ../../../JSPatch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -549,6 +553,7 @@
 				TargetAttributes = {
 					DE94AE0A1AF246BF00E461D4 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 74Z7WT84EE;
 					};
 					DE94AE231AF246C000E461D4 = {
 						CreatedOnToolsVersion = 6.2;
@@ -581,8 +586,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C9C0EE51C25A7DA00FCAAC5 /* newProtocolTest.js in Resources */,
-				3613C3871C6329F300E915CB /* JSPatch.js in Resources */,
 				3613C38F1C6329F300E915CB /* packer.php in Resources */,
+				EA78CB811E7E8AF500E15121 /* hctaPSJ.js in Resources */,
 				DE6FFF051B42C25D0005EE83 /* protocolTest.js in Resources */,
 				2D6D12FD1B0B8CF20095A435 /* Images.xcassets in Resources */,
 				2D6D13011B0B8CFF0095A435 /* demo.js in Resources */,
@@ -619,10 +624,10 @@
 				2D5D89211B0B8BFF009382EC /* AppDelegate.m in Sources */,
 				36CC3A511CFEE6A80001465B /* JPCGContext.m in Sources */,
 				3613C38E1C6329F300E915CB /* ZipArchive.m in Sources */,
-				3613C3861C6329F300E915CB /* JPEngine.m in Sources */,
 				36CC3A531CFEE6A80001465B /* JPCGImage.m in Sources */,
 				36CC3A541CFEE6A80001465B /* JPCGPath.m in Sources */,
 				3613C3881C6329F300E915CB /* JPLoader.m in Sources */,
+				EA78CB821E7E8AF500E15121 /* JPEngine.m in Sources */,
 				36CC3A501CFEE6A80001465B /* JPCGColor.m in Sources */,
 				4F9EBFC51D50745200EC72C1 /* JPNumber.m in Sources */,
 				36CC3A521CFEE6A80001465B /* JPCGGeometry.m in Sources */,
@@ -762,8 +767,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 74Z7WT84EE;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = ./JSPatchDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/JSPatchDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_GENERATE_MAP_FILE = YES;
@@ -784,8 +790,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 74Z7WT84EE;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = ./JSPatchDemo/PrefixHeader.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/JSPatchDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -811,6 +818,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = ./JSPatchDemo/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -831,6 +839,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = ./JSPatchDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = JSPatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;

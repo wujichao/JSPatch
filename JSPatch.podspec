@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
   s.frameworks   = "Foundation"
   s.weak_framework = "JavaScriptCore"
   s.default_subspec = 'Core'
+  s.prefix_header_contents =  "#import <JSPatch/RenamePrefix.h>"
 
   s.subspec 'Core' do |ss|
     ss.ios.source_files = "JSPatch/*.{h,m}"

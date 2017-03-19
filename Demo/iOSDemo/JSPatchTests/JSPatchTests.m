@@ -20,6 +20,19 @@
 #import "JPCFunctionTest.h"
 #import "JPNumberTest.h"
 
+#import "JPBlock.h"
+#import "JPCFunction.h"
+#import "JPMemory.h"
+#import "JPStructPointer.h"
+#import "JPCoreGraphics.h"
+#import "JPUIKit.h"
+#import "JPCleaner.h"
+#import "JPDispatch.h"
+#import "JPLocker.h"
+#import "JPNumber.h"
+#import "JPProtocol.h"
+
+
 @interface JSPatchTests : XCTestCase
 
 @end
@@ -34,7 +47,13 @@
 - (void)setUp {
     [super setUp];
     [JPEngine startEngine];
-    [JPEngine addExtensions:@[@"JPMemory", @"JPStructPointer", @"JPCoreGraphics", @"JPUIKit"]];
+    [JPEngine addExtensions:@[@JP_Stringify(JPMemory),
+                               @JP_Stringify(JPStructPointer),
+                               @JP_Stringify(JPCoreGraphics),
+                               @JP_Stringify(JPUIKit)]];
+    
+    NSArray *extensions = @[@JP_Stringify(JPBlock), @JP_Stringify(JPCFunction), @JP_Stringify(JPMemory), @JP_Stringify(JPStructPointer), @JP_Stringify(JPCoreGraphics), @JP_Stringify(JPUIKit), @JP_Stringify(JPCleaner), @JP_Stringify(JPDispatch), @JP_Stringify(JPLocker), @JP_Stringify(JPNumber), @JP_Stringify(JPProtocol)];
+    [JPEngine addExtensions:extensions];
 }
 
 - (void)tearDown {
