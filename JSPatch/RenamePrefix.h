@@ -30,6 +30,9 @@
 #define JPUIKit tiKIUPJ
 
 #define JSPatch hctaPSJ
+#define JPFix xiFPJ
+#define jp_methodSignatureForSelector pj_method_SignatureForSelector
+#define jp_fixMethodSignature pj_fix_Method_Signature
 
 #define JP_Stringify_(VALUE) # VALUE
 #define JP_Stringify(VALUE) JP_Stringify_(VALUE)

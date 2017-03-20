@@ -380,7 +380,7 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
     if (![JSContext class]) {
         return;
     }
-    if (!_context) _exceptionBlock(@"please call [JPEngine startEngine]");
+    if (!_context) _exceptionBlock(@"please call"); //[JPEngine startEngine]
     for (NSString *className in extensions) {
         Class extCls = NSClassFromString(className);
         [extCls main:_context];
