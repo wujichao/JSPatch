@@ -289,7 +289,7 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
         NSArray *args = [JSContext currentArguments];
         for (JSValue *jsVal in args) {
             id obj = formatJSToOC(jsVal);
-            NSLog(@"JSPatch.log: %@", obj == _nilObj ? nil : (obj == _nullObj ? [NSNull null]: obj));
+            NSLog(@"log: %@", obj == _nilObj ? nil : (obj == _nullObj ? [NSNull null]: obj));
         }
     };
     
