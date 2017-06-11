@@ -36,3 +36,13 @@
 
 #define JP_Stringify_(VALUE) # VALUE
 #define JP_Stringify(VALUE) JP_Stringify_(VALUE)
+
+#define formatPointerJSToOC fmtonativ
+#define formatRetainedCFTypeOCToJS transretrfcsf2
+#define formatPointerOCToJS fjcisuqckcy2d
+#define getStructDataWidthDict truansciysk
+#define registeredStruct enrolledstcus2
+#define sizeOfStructTypes fscvhwwf
+#define getDictOfStruct gehghhs
+#define obj ojbiect
+#define weakObj weakshring

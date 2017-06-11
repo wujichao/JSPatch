@@ -41,7 +41,7 @@
 - (void)loadPatch:(NSString *)patchName
 {
     NSString *jsPath = [[NSBundle bundleForClass:[self class]] pathForResource:patchName ofType:@"js"];
-    [JPEngine evaluateScriptWithPath:jsPath];
+    [JPEngine runScriptWithPath:jsPath];
 }
 
 - (void)setUp {

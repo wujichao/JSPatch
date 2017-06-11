@@ -35,7 +35,7 @@ void (^JPLogger)(NSString *log);
         NSString *scriptPath = [libraryDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"JSPatch/%@/%@", appVersion, filePath]];
         if ([[NSFileManager defaultManager] fileExistsAtPath:scriptPath]) {
             [JPEngine startEngine];
-            [JPEngine evaluateScriptWithPath:scriptPath];
+            [JPEngine runScriptWithPath:scriptPath];
         }
     };
 }
@@ -54,7 +54,7 @@ void (^JPLogger)(NSString *log);
         NSArray *component = [filePath componentsSeparatedByString:@"."];
         if (component.count > 1) {
             NSString *testPath = [[NSBundle bundleForClass:[self class]] pathForResource:component[0] ofType:component[1]];
-            [JPEngine evaluateScriptWithPath:testPath];
+            [JPEngine runScriptWithPath:testPath];
         }
     };
 }
@@ -75,7 +75,7 @@ void (^JPLogger)(NSString *log);
     if ([[NSFileManager defaultManager] fileExistsAtPath:scriptPath]) {
         [JPEngine startEngine];
         [JPEngine addExtensions:@[@"JPLoaderInclude"]];
-        [JPEngine evaluateScriptWithPath:scriptPath];
+        [JPEngine runScriptWithPath:scriptPath];
         if (JPLogger) JPLogger([NSString stringWithFormat:@"JSPatch: evaluated script %@", scriptPath]);
         return YES;
     } else {
@@ -213,7 +213,7 @@ void (^JPLogger)(NSString *log);
     NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"main" ofType:@"js"];
     NSAssert(path, @"can't find main.js");
     NSString *script = [[NSString alloc] initWithData:[[NSFileManager defaultManager] contentsAtPath:path] encoding:NSUTF8StringEncoding];
-    [JPEngine evaluateScript:script];
+    [JPEngine runScript:script];
 }
 
 + (void)setLogger:(void (^)(NSString *))logger {

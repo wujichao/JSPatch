@@ -238,7 +238,7 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
             _runnedScript = [[NSMutableSet alloc] init];
         }
         if (absolutePath && ![_runnedScript containsObject:absolutePath]) {
-            [JPEngine _evaluateScriptWithPath:absolutePath];
+            [JPEngine _runScriptWithPath:absolutePath];
             [_runnedScript addObject:absolutePath];
         }
     };
@@ -328,24 +328,24 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
     }
 }
 
-+ (JSValue *)evaluateScript:(NSString *)script
++ (JSValue *)runScript:(NSString *)script
 {
-    return [self _evaluateScript:script withSourceURL:[NSURL URLWithString:@"main.js"]];
+    return [self _runScript:script withSourceURL:[NSURL URLWithString:@"main.js"]];
 }
 
-+ (JSValue *)evaluateScriptWithPath:(NSString *)filePath
++ (JSValue *)runScriptWithPath:(NSString *)filePath
 {
     _scriptRootDir = [filePath stringByDeletingLastPathComponent];
-    return [self _evaluateScriptWithPath:filePath];
+    return [self _runScriptWithPath:filePath];
 }
 
-+ (JSValue *)_evaluateScriptWithPath:(NSString *)filePath
++ (JSValue *)_runScriptWithPath:(NSString *)filePath
 {
     NSString *script = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    return [self _evaluateScript:script withSourceURL:[NSURL URLWithString:[filePath lastPathComponent]]];
+    return [self _runScript:script withSourceURL:[NSURL URLWithString:[filePath lastPathComponent]]];
 }
 
-+ (JSValue *)_evaluateScript:(NSString *)script withSourceURL:(NSURL *)resourceURL
++ (JSValue *)_runScript:(NSString *)script withSourceURL:(NSURL *)resourceURL
 {
     if (!script || ![JSContext class]) {
         _exceptionBlock(@"script is nil");
